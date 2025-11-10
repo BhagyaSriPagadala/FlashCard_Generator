@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Flashcard Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Agentic AI Flashcard Generator</h1>
+            <p class="subtitle">Powered by Gemini API with Multi-Step Reasoning</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-card">
+                <h2>📄 Upload Your Document</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="fileInput" class="file-label">
+                            <span class="file-icon">📁</span>
+                            <span id="fileName">Choose PDF or DOCX file</span>
+                        </label>
+                        <input type="file" id="fileInput" name="file" accept=".pdf,.docx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty">🎯 Select Difficulty Level</label>
+                        <select id="difficulty" name="difficulty" required>
+                            <option value="Easy">Easy - Basic Definitions</option>
+                            <option value="Medium" selected>Medium - Concepts & Relationships</option>
+                            <option value="Hard">Hard - Application & Analysis</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-generate" id="generateBtn">
+                        <span>Generate Flashcards</span>
+                        <span class="btn-icon">✨</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="process-info">
+                <h3>🧠 Agentic Processing Steps:</h3>
+                <ul>
+                    <li><strong>Step 1:</strong> Analyze document structure & complexity</li>
+                    <li><strong>Step 2:</strong> Plan flashcard extraction strategy</li>
+                    <li><strong>Step 3:</strong> Generate flashcards with AI reasoning</li>
+                    <li><strong>Step 4:</strong> Evaluate for clarity & accuracy</li>
+                    <li><strong>Step 5:</strong> Refine if needed before delivery</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p class="loading-text">Agentic AI is processing your document...</p>
+            <p class="loading-subtext">Analyzing → Planning → Generating → Evaluating → Refining</p>
+        </div>
+
+        <div id="flashcardsContainer" class="flashcards-container" style="display: none;">
+            <div class="flashcards-header">
+                <h2>📚 Generated Flashcards</h2>
+                <p class="flashcards-count"><span id="cardCount">0</span> cards created</p>
+            </div>
+            <div id="flashcardsGrid" class="flashcards-grid"></div>
+            
+            <div class="feedback-section">
+                <p>Help improve future generations:</p>
+                <button class="btn-feedback" onclick="sendFeedback('easy')">👍 Too Easy</button>
+                <button class="btn-feedback" onclick="sendFeedback('hard')">👎 Too Hard</button>
+                <button class="btn-feedback" onclick="sendFeedback('perfect')">✅ Perfect</button>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>Built with Flask + Gemini API + Agentic Reasoning | 2025</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
+
+
+
