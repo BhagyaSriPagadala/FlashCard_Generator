@@ -16,6 +16,7 @@ Built with Flask, HTML, CSS, and JavaScript, it provides an intuitive interface 
 
 🗂️ Project Structure
 📦 agentic-ai-flashcards/
+
  ┣ 📂 static/                # CSS, JS, images
  
  ┣ 📂 templates/             # HTML templates (Flask)
