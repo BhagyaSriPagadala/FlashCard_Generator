@@ -17,17 +17,27 @@ Built with Flask, HTML, CSS, and JavaScript, it provides an intuitive interface 
 🗂️ Project Structure
 📦 agentic-ai-flashcards/
  ┣ 📂 static/                # CSS, JS, images
+ 
  ┣ 📂 templates/             # HTML templates (Flask)
+ 
  ┣ 📜 app.py                 # Flask backend
+ 
  ┣ 📜 requirements.txt       # Dependencies
- ┣ 📜 Procfile               # Deployment entry for Hugging Face / Render
+ 
+ ┣ 📜 Procfile               # Deployment entry for Render
+ 
  ┣ 📜 .gitignore             # Ignore venv, cache, etc.
+ 
  ┗ 📜 README.md              # Project overview
 
  🚀 Example Workflow
 
 User uploads a .txt or .pdf file (or types text).
+
 Chooses difficulty level (Easy / Medium / Hard).
+
 Flask backend sends input to Gemini API.
+
 Gemini model generates flashcards (Q&A style).
+
 Frontend displays interactive flashcards for learning.
