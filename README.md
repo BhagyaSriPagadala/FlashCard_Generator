@@ -5,9 +5,13 @@ Built with Flask, HTML, CSS, and JavaScript, it provides an intuitive interface 
 🌟 Features
 
 🧩 Gemini AI Integration – Uses Google’s Generative AI to summarize and generate flashcards.
+
 ⚡ Agentic Reasoning – Dynamically adapts flashcard content based on difficulty or user preference.
+
 🎨 Frontend in HTML/CSS/JS – Clean, minimal beige-themed design.
+
 🔗 Flask Backend – Handles AI requests, text processing, and data flow.
+
 🧰 Easy Deployment – Fully compatible with Hugging Face Spaces, Render, and local ngrok testing.
 
 🗂️ Project Structure
