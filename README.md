@@ -42,3 +42,10 @@ Flask backend sends input to Gemini API.
 Gemini model generates flashcards (Q&A style).
 
 Frontend displays interactive flashcards for learning.
+
+
+
+https://github.com/user-attachments/assets/de62133c-46ef-4a22-b4fb-5208c65f93a1
+
+
+
